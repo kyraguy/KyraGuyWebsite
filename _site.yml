@@ -1,0 +1,11 @@
+name: "Adolescent Mental Health in Uganda"
+output_dir: "."
+navbar:
+  left:
+    - text: Home
+      href: index.html
+
+output:
+  html_document:
+    theme: flatly
+    toc: true
