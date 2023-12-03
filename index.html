@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Kyra Guy" />
+
+
+<title>Results of a Youth-led Community Health Assessment in Lira District, Northern Uganda</title>
+
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/table1-1.0/table1_defaults.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Results of a Youth-led Community Health
+Assessment in Lira District, Northern Uganda</h1>
+<h4 class="author">Kyra Guy</h4>
+
+</div>
+
+
+<p><br></p>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<style type="text/css">
+.code-r { /* Code block */
+  font-size: 15px;
+}
+
+.code-r-small { /* Code block */
+  font-size: 10px;
+}
+</style>
+<p>According to the World Health Organization (WHO), mental health
+disorders currently affect more than one billion people, including one
+in seven adolescents. However, despite the growing health and economic
+burden, governments spend only around 2% of their health budgets on
+these disorders and people with mental health conditions often
+experience severe human rights violations, discrimination, and
+stigma.</p>
+<p>The dataset used in this analysis originates from a community health
+assessment conducted by the University of Southern California’s Global
+Research Implementation and Training Lab in Lira District, Eastern
+Uganda.</p>
+<p><br></p>
+</div>
+<div id="study-objectives" class="section level1">
+<h1>Study Objectives</h1>
+<p>In response to the call for greater attention to mental health
+challenges in low-income and post-conflict communities, a
+community-based participatory research (CBPR) study was carried out in
+Lira District, Uganda in the Spring of 2022. Data was collected through
+an adolescent questionnaire assessing general demographics, physical
+health status, diet, substance use, violence and risky behaviors, mental
+health knowledge, and behaviors, Adverse Childhood Experiences Score
+(ACE-IQ), and WHO-5 Wellbeing Index Scores.</p>
+<p>The main research question explored through this dataset is, using
+measures including ACE-IQ and WHO Wellbeing Index scores as predictors,
+what are current mental health outcomes among adolescents in Lira
+District, specifically looking at how might factors, such as gender and
+participant subcounty affect these outcomes among this population.</p>
+<p><br></p>
+<p><br></p>
+<div id="results" class="section level2 tabset">
+<h2 class="tabset">Results</h2>
+<div id="table-1" class="section level3">
+<h3>Table 1</h3>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class='rowlabel firstrow lastrow'></th>
+<th class='firstrow lastrow'><span class='stratlabel'>Overall<br><span class='stratn'>(N=307)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='rowlabel firstrow'>Subcounty</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Ayami</td>
+<td>72 (23.5%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Aromo</td>
+<td>141 (45.9%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Agweng</td>
+<td>93 (30.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>Age Category</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>14-15</td>
+<td>189 (61.6%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>16-17</td>
+<td>117 (38.1%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>Gender</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Male</td>
+<td>139 (45.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Female</td>
+<td>167 (54.4%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>Religion</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Anglican</td>
+<td>104 (33.9%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Roman Catholic</td>
+<td>113 (36.8%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Muslim</td>
+<td>3 (1.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Pentecostal</td>
+<td>84 (27.4%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Jewish</td>
+<td>2 (0.7%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>People in Home</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Mother</td>
+<td>84 (27.4%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Father</td>
+<td>130 (42.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Brother/Sister</td>
+<td>59 (19.2%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Grandparent</td>
+<td>33 (10.7%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>Caretaker</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>I sleep alone</td>
+<td>197 (64.2%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>2 people</td>
+<td>96 (31.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>3 people</td>
+<td>3 (1.0%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>4 people</td>
+<td>9 (2.9%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>5 or more people</td>
+<td>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel firstrow'>School</td>
+<td class='firstrow'></td>
+</tr>
+<tr>
+<td class='rowlabel'>Enrolled</td>
+<td>268 (87.3%)</td>
+</tr>
+<tr>
+<td class='rowlabel'>Not enrolled</td>
+<td>38 (12.4%)</td>
+</tr>
+<tr>
+<td class='rowlabel lastrow'>Missing</td>
+<td class='lastrow'>1 (0.3%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This table shows participant demographics. Amongst the surveyed
+youth, 45.42% were male and 54.58% were female, the majority of which
+(61.8%) were 14 and 15 years old and enrolled in school (87.5%).</p>
+</div>
+<div id="plot-1" class="section level3">
+<h3>Plot 1</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="700px" style="display: block; margin: auto;" /></p>
+<p>Adverse Childhood Experience (ACE-IQ) scores for adolescents ranged
+from 0-11, with an average score of 3. Out of 13.41% of adolescents had
+ACE-IQ scores of 4 or higher. WHO Wellbeing Index scores ranged from
+20-100, with an average score of 48.38.</p>
+</div>
+<div id="plot-2" class="section level3">
+<h3>Plot 2</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="700px" style="display: block; margin: auto;" /></p>
+<p>In all 3 sub-counties, females scored higher than males, with females
+in Agweng scoring the highest on the ACE-IQ survey tool indicating
+having experienced the most adverse childhood experiences.</p>
+</div>
+<div id="plot-3" class="section level3">
+<h3>Plot 3</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="700px" style="display: block; margin: auto;" /></p>
+<p>Males still scored higher in the wellbeing index. Adolescents from
+Agweng had the lowest scores.</p>
+</div>
+<div id="plot-4" class="section level3">
+<h3>Plot 4</h3>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-504e47a43f2e10228154" style="width:700px;height:415.296px;"></div>
+<script type="application/json" data-for="htmlwidget-504e47a43f2e10228154">{"x":{"data":[{"x":[1.1707047997042537,4.0573168767616155,6.0168936257250607,3.907898451667279,3.9522580944001673,3.0082668317481875,0.90518297655507918,2.8646769108250738,2.0314223914407195,1.0908808200620115,1.1746824544854462,0.91598464930430057,4.1881294217891991,1.0957818928174674,6.8812086762860414,1.8288919471204281,0.93077516201883559,0.8477819995954633,1.1761171753518282,0.91918630078434949,-0.19456809693947436,5.9284734190441668,3.1230923727154734,1.805903656873852,2.9384942170232535,2.0953195117413999,1.8619131976738572,4.0698145831003787,0.95491529908031225,3.156653692666441,2.1856084764935075,4.1672194377519194,1.9947848089039326,1.9397444947622717,2.9544413590803744,0.91653001774102449,2.9699692452326416,2.0118371463380753,2.9010821488685905,2.0311041184701026,-0.11272770566865803,5.9394686813466251,1.1413319847546517,4.8449682815931734,2.0783220007084311,1.9911452011205255,4.1306202649138868,1.0508917614817619,2.1687220428138971,4.1567416043952106,1.1958200001157819,0.83229153109714393,0.98589891968294974,3.1682247168384494,1.8432475001551212,5.9786398199386896,1.1226713124662637,3.028369142860174,1.179863348416984,4.0211212215013798,3.1368112009949982,0.84155780719593165,3.9516281720250843,4.0798559213988481,7.0416221169754865,4.9259220757521689,2.9181861910969018,0.0064606767147779576,3.8887536896392705,4.0513292236253617,3.0850366074591875,0.93942488403990865,6.0494127011857923,0.86829298315569758,0.95869242101907726,1.013409569580108,0.93776009967550633,3.122734311595559,2.9736992573365568,2.873452252149582,6.0918605011887852,6.0560642268508671,4.1728224840015171,2.0480777898803355,2.9736167779192328,4.0888097754679622,6.9041664188727738,2.0571187302470206,2.1130562707781793,5.9891762617044151,3.8461406561546028,1.1414628845639527,2.1691538828425108,4.14404434831813,4.1145924294367431,6.8422374826855954,5.8513098256662488,2.199683275539428,2.8894272329285742,3.0252546489238741,9.0948943047784265,4.9223029561340805,2.1894126678816974,2.9133913095109163,7.8651554496958855,7.8865053609944882,2.0712693569250407,2.8155033066868782,2.0450561182573437,5.8641382247209553,4.1360822586342696,2.9336961038410663,2.9739168693311511,2.1216826514340936,12.003767249826343,4.9213907987810668,-0.18053279975429179,3.1878179794177415,3.9304667128250004,1.8932812192477286,3.1727264760062099,2.0185881547629831,2.1496671200729907,0.89569618515670302,2.9523414012044666,2.1349595026113093,0.057198532577604044,5.0889731088653205,8.9547774186357856,1.1877413392998277,5.0338973836973313,3.137003326974809,2.0599218520335851,1.1566688158549367,10.988622210267931,3.1180271830409767,3.0642273523844779,4.8390867936424913,1.0783440877683461,3.0737207423895598,3.9720214533619584,4.0928125801496211,7.8070246493443847,4.1280472220852973,2.8277002947404979,2.0305559794418513,5.1556106058880689,3.0332991677336394,4.9492081890814008,2.0113070759922267,2.9268484270200132,6.0936329522170123,1.1099881020374596,3.8151624160818756,5.178295740671456,3.8414927925914526,5.9284133387729527,1.9514168255031108,5.0331023134291168,7.1510524512268603,1.0972444597631692,0.93363931588828564,4.1305412515066564,8.1229514555074278,0.058598601445555676,3.8979187347926199,2.9412922382354738,1.9195886096917092,2.086540523637086,2.8018317240290345,1.8729930963367223,2.0245201747864483,-0.12672419007867575,2.9766234167851509,3.0596952137537299,2.1928051901049912,4.1915350260213016,1.8986003270372749,1.029998612497002,1.8528656589798629,1.1402888102456927,5.0437062772922214,1.8636198611930013,1.9344626106321812,5.1550382753834132,5.8074975310824808,4.1925206138752404,2.0557977935299276,1.876947218645364,2.0023265989497303,0.096771597489714645,1.0396624326705932,4.9256002205424014,7.9750918867066503,3.1452827897854148,2.807997949514538,0.86884779185056682,2.9013934200629592,1.081154998857528,0.97580868378281593,7.1403501825407147,3.8017106246203185,4.0696112380363045,3.8236219079233704,1.9560379782691597,3.1727148041129114,1.1206242171116174,0.13288380485028028,1.9182894992642106,5.0762532727792857,5.8021131240762767,8.9334987661801275,2.0668466834351422,4.9045180809684101,5.8438069920055566,0.12343062395229937,3.9849463140591981,5.0368025212548675,4.8160718847066164,4.8594042353332041,7.9249743971042337,4.941573848295957,5.8500834912993014,5.1739185207523404,0.93038070006296036,5.0855529141612354,5.0544234483502803,5.9186393820680676,6.1679874483495949,4.825854224991053,4.1454397128894929,4.1884106815792617,3.1279691537842154,5.1056704641319808,4.9811617644503716,1.1920358602888883,4.8273635795339942,1.9090816447511316,1.9241632709279657,1.9617069983854889,6.8352518985047936,2.0561272108927371,2.1127567036077379,4.8622813087888064,4.1319965650327504,4.8711248790845278,2.1196635024622084,3.18686228627339,6.8490309916436676,6.1080670125782488,2.0658683768473565,10.057782246451826,3.1425602885894479,1.1502945574000478,0.96911709737032647,1.9069888739846648,5.1858225631527599,5.8306090328842402,1.9279884479939937,3.8143553303554656,0.95923273693770172,-0.15025058798491955,4.0272328663617376,9.8616422126069665,9.8519007837399837,3.0981427607126535,2.8045996061526237,4.1032366448082032,2.0166909566149114,1.9431319632567465,4.080942060705274,6.8456685315817598,0.98308460880070925,3.8403239624574779,5.1212894021533426,2.9437211062759161,1.0867679841816424,5.1182929037138818,4.1846787983551623,5.9732839372009039,0.85885657174512742,3.9236821512691678,-0.043849696312099701,2.0590515500865876,0.91798804197460415,2.928745902236551,6.8629451029002668,1.0839596568606793,2.8731692738831045,4.8787978406995531,2.1617342586629094,4.8876509641297163,6.9133441401645541,5.8664688332937658,3.0916052843444048,0.13045797115191821,1.8615393300540746,5.0431722385808824,0.80410493034869435,4.0528663343749942,4.0014900350011882,2.8671569455415011,0.95096509857103229,5.1806985273957249,2.9399946661666037,0.94371617771685123,-0.11611979603767396],"y":[19.93664058847353,47.947259720321746,80.145120638050145,40.046611905843022,32.11426595477387,31.813217031676324,27.97319344105199,24.113514560740441,27.941899129841477,52.184311849530786,28.144612161070107,36.045617216452953,31.979049565456808,27.848960072547197,59.962308516167106,35.912751818075776,43.858306370023641,67.97898501567542,63.950457208231093,76.017643231339747,56.143556623160841,67.936769678443667,99.917058389820156,99.867868501506749,48.031084923911841,72.18804861893878,76.141617288067934,20.076578128617257,88.161796122603121,40.176435792446135,23.990109717193992,48.111877112369982,87.994051290303474,28.075080700963735,31.813685561344027,32.079584551416339,39.91944132717326,99.833147138915962,40.100588926300404,31.988523280713707,100.00514323394745,44.156226983666421,40.001362206321211,43.842347068525854,100.03050350779668,27.891033148486166,100.00131040047854,99.811626655701545,100.0214026237838,56.027186407707632,72.062168843671685,95.900952287204561,52.197843837086111,20.197573028318583,92.084020699560639,67.980698687396938,28.140858651231973,40.065026060678065,39.877011163905266,39.841385136172178,23.846261556353419,40.113306328188628,36.129554652795193,44.113710385654123,36.006298393476754,20.120984983723609,44.040137473121284,35.834106443915516,43.965462079178543,43.83859691834077,83.916953061427918,35.922276365198194,68.029983161389822,48.089358268957582,40.022655478958043,39.800711465254423,36.026748974993822,40.100452376343313,87.876863830443469,99.868583975639197,35.95451335590333,20.039459957834332,51.929990971367808,67.830122774466872,52.056181423459201,31.856596325244755,19.845488194562495,83.842180878110227,68.157763304002586,55.936045381147416,55.906981673929842,35.857363959308714,84.133922363165766,36.095198432449251,68.138404431287199,83.982064109854406,79.906527065113181,31.929203755408526,28.135892083402723,28.105041942838579,80.186402542702851,75.840602679830042,27.907021003216506,31.803874041792007,39.854684115573761,39.92462741704658,39.802374028414491,28.110574520565571,28.190987573191524,40.06243999553844,40.082711281534287,40.012867933139205,36.156170626450333,55.858081850782035,39.95701587628573,64.004479631874716,39.862185539491477,39.945007870253178,39.830429862719029,28.016513574123383,40.148057890404019,44.081887978408488,40.055103491153567,44.043449169863017,40.158021581731738,39.911457813251765,39.813679137080911,39.955411796178666,39.934451556298882,76.141721556056297,52.014727625902744,40.088661143183707,71.851183355133983,56.141400019172579,20.139385414496065,35.90032683387399,39.944217836111783,51.97363939974457,40.120313878916207,31.810469219088553,68.069240429345513,99.974924531765282,60.021247503440826,51.823508744873109,48.042673975136132,44.079551507905123,36.164864512905481,52.009124430641535,39.949780657049267,51.995228009670974,35.873157746251671,24.164022885262966,23.869777132011951,19.852253338228913,80.084336128085852,20.068650142010302,47.871510406024754,63.904829284641892,39.830709909833971,35.860693461727351,52.084890397451815,47.848175110574815,67.924913223646584,32.024417138192803,40.114363882597537,39.898944927565751,47.915696497168391,68.057924568932506,60.06983827939257,76.192986708600074,39.907030640821901,40.152427710499616,40.164432714786379,39.822492176946255,67.861725535709411,20.065751628950238,63.832240452524275,20.007042579725386,56.196212082915011,44.104992424789813,71.930230155587196,100.18332435535267,40.113332719821486,40.152060702070592,40.008536697924136,39.842584488075225,40.181281615234909,44.08006245428696,39.988469302654266,80.051594411395484,36.14995230631903,27.915537824109197,51.813944267574698,100.0057559562847,36.152008741628379,72.161865226831281,28.161795275751501,59.948295107576996,36.1174727011472,28.060329795628785,47.900280123669653,48.095493784174323,20.195792881119996,47.937721433490516,83.990054994449025,88.097596914228049,75.99111192366108,43.966397073399278,36.11267309747636,31.896024370752276,47.999254046101122,99.8867939257063,39.996028547454628,40.138093939423563,40.028354650270195,19.946780560538173,44.153584382683036,19.845366866514087,40.061706774216148,51.998362750187518,64.040181147959089,36.004526386316869,27.840874563716351,59.94505990874022,32.102179961372165,40.123908125329763,44.169649178907278,39.825823992304507,51.937485618144272,44.184284179937094,48.035184699669479,84.147766730096194,47.878167020436379,40.075184286572039,59.85903441067785,47.954116979148239,52.023668920155615,40.167541993781924,27.960850434843451,40.112404350750147,44.004296567477283,39.840180159267035,71.838810632470995,63.802923951204868,39.822398014180365,80.033390680979934,48.012730529345575,35.972174463234843,39.935415150597692,28.138145702891052,43.935037980880587,39.979001758992673,39.815334920957682,19.87360061183572,40.039296760689467,39.95608536647633,43.997726124431935,40.13009271835908,40.033233638200912,39.889814264420423,63.842346726078539,52.176100143976512,40.16613670028746,20.092689150571822,39.840876276791093,59.884043068159372,91.97115545691922,39.881704263109711,36.169341251812874,63.823793374467641,24.162339875102042,67.972678647469735,27.933345888275653,52.10652680667117,44.061935901455584,56.046148809604347,40.08023761603981,68.052247866429383,60.088693517725915,68.085761657729748,32.060125282406808,28.150376278068869,55.839474724791941,88.000427290331572,35.959148732200262,48.154281053785233,39.923729363828897,99.801151329372075,83.902942836284637,32.022773009538653,43.80743326805532,36.082885813899338,31.925017746631056,35.934956060908732,24.030793639551849,27.859214378334581,20.131662131566554,68.113518085703248,47.945150787848981,40.056492826156315,43.834550831466913,24.07999911867082,40.077378104440868,32.156721937377007,44.048545301798733,31.893639546167105,null],"text":"","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":0.5,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0,0.15189873417721519,0.30379746835443039,0.45569620253164556,0.60759493670886078,0.759493670886076,0.91139240506329111,1.0632911392405064,1.2151898734177216,1.3670886075949367,1.518987341772152,1.6708860759493671,1.8227848101265822,1.9746835443037976,2.1265822784810129,2.278481012658228,2.4303797468354431,2.5822784810126582,2.7341772151898733,2.8860759493670889,3.037974683544304,3.1898734177215191,3.3417721518987342,3.4936708860759493,3.6455696202531644,3.79746835443038,3.9493670886075951,4.1012658227848107,4.2531645569620258,4.4050632911392409,4.556962025316456,4.7088607594936711,4.8607594936708862,5.0126582278481013,5.1645569620253164,5.3164556962025316,5.4683544303797467,5.6202531645569618,5.7721518987341778,5.9240506329113929,6.075949367088608,6.2278481012658231,6.3797468354430382,6.5316455696202533,6.6835443037974684,6.8354430379746836,6.9873417721518987,7.1392405063291138,7.2911392405063289,7.4430379746835449,7.59493670886076,7.7468354430379751,7.8987341772151902,8.0506329113924053,8.2025316455696213,8.3544303797468356,8.5063291139240516,8.6582278481012658,8.8101265822784818,8.962025316455696,9.113924050632912,9.2658227848101262,9.4177215189873422,9.5696202531645564,9.7215189873417724,9.8734177215189884,10.025316455696203,10.177215189873419,10.329113924050633,10.481012658227849,10.632911392405063,10.784810126582279,10.936708860759493,11.088607594936709,11.240506329113924,11.39240506329114,11.544303797468356,11.69620253164557,11.848101265822786,12],"y":[48.546152678435966,48.538583987992354,48.531015297548741,48.523446607105129,48.515877916661516,48.508309226217904,48.500740535774291,48.493171845330679,48.485603154887059,48.478034464443446,48.470465773999834,48.462897083556221,48.455328393112609,48.447759702668996,48.440191012225384,48.432622321781771,48.425053631338159,48.417484940894546,48.409916250450934,48.402347560007321,48.394778869563709,48.387210179120096,48.379641488676477,48.372072798232864,48.364504107789251,48.356935417345639,48.349366726902026,48.341798036458414,48.334229346014801,48.326660655571189,48.319091965127576,48.311523274683964,48.303954584240351,48.296385893796739,48.288817203353126,48.281248512909514,48.273679822465901,48.266111132022282,48.258542441578669,48.250973751135056,48.243405060691444,48.235836370247831,48.228267679804219,48.220698989360606,48.213130298916994,48.205561608473381,48.197992918029769,48.190424227586156,48.182855537142544,48.175286846698931,48.167718156255319,48.160149465811699,48.152580775368087,48.145012084924474,48.137443394480862,48.129874704037249,48.122306013593636,48.114737323150024,48.107168632706411,48.099599942262799,48.092031251819186,48.084462561375574,48.076893870931961,48.069325180488349,48.061756490044736,48.054187799601117,48.046619109157504,48.039050418713892,48.031481728270279,48.023913037826667,48.016344347383054,48.008775656939441,48.001206966495829,47.993638276052216,47.986069585608604,47.978500895164991,47.970932204721379,47.963363514277766,47.955794823834154,47.948226133390541],"text":"","type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.7795275590551185,"color":"rgba(0,0,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.356149606182861,"r":7.3059360730593621,"b":41.776240930383779,"l":43.105022831050235},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Wellbeing Index Scores and ACE Scores","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.80448486427776511,12.613684017164633],"tickmode":"array","ticktext":["0","4","8","12"],"tickvals":[0,4,7.9999999999999991,12],"categoryorder":"array","categoryarray":["0","4","8","12"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"ACE Scores","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[15.828468992072157,104.20022222979459],"tickmode":"array","ticktext":["20","40","60","80","100"],"tickvals":[20,40,60,80,100],"categoryorder":"array","categoryarray":["20","40","60","80","100"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Wellbeing Index Scores","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"921175ce4a30":{"x":{},"y":{},"type":"scatter"},"92113a68d1bc":{"x":{},"y":{}}},"cur_data":"921175ce4a30","visdat":{"921175ce4a30":["function (y) ","x"],"92113a68d1bc":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>From the scatterplot of ACE scores and Wellbeing index scores they
+seem to have a moderate inverse relationship, higher ACE scores indicate
+lower Wellbeing scores.</p>
+</div>
+</div>
+</div>
+<div id="conclusions" class="section level1">
+<h1>Conclusions</h1>
+<p>Preliminary study results indicate that adolescents surveyed
+throughout Lira District in northern Uganda exhibited poor mental health
+status. Participant gender and sub-county played significant roles in
+mental health outcomes. Ultimately, results show that poor mental health
+outcomes disproportionately impact the weakest and often most
+marginalized populations in society; namely poor, rural, women and
+girls. The adolescents surveyed have no living memory of the war,
+however, they do have memories of the immediate aftermath, have grown up
+in communities struggling to rebuild post-conflict, and have been raised
+by parents who most likely suffered directly. This study provides useful
+insight into the impact of the conflict on the health and wellness of
+the subsequent generation of youth in the region. Mental health response
+by politically informed analyses and interventions should be a priority
+focus for building positive adolescent health outcomes.</p>
+<p><br></p>
+<p>For further analysis, view the full study report here: <a
+href="file:///Users/kyraguy/Downloads/Adolescent%20Mental%20Health%20Assessment.pdf">[Download
+the PDF Report]</a></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
