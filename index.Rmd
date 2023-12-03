@@ -1,0 +1,216 @@
+---
+title: "Results of a Youth-led Community Health Assessment in Lira District, Northern Uganda" 
+author: "Kyra Guy"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+<br>
+
+# Background
+
+```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
+
+library(lubridate)
+library(tidyverse)
+library(data.table)
+library(ggplot2)
+library(dtplyr)
+library(dplyr)
+library(stringr)
+library(knitr)
+library(plotly)
+library(readr)
+library(magrittr)
+library(readxl)
+library(writexl)
+library(kableExtra)
+library(table1)
+
+# Initialize code chunk options
+opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  eval=TRUE,
+  echo = TRUE,
+  cache = FALSE,
+  fig.width = 7, 
+  fig.align = 'center',
+  fig.asp = 0.618,
+  out.width = "700px")
+```
+
+```{css, echo = FALSE}
+.code-r { /* Code block */
+  font-size: 15px;
+}
+
+.code-r-small { /* Code block */
+  font-size: 10px;
+}
+```
+
+According to the World Health Organization (WHO), mental health disorders currently affect more than one billion people, including one in seven adolescents. However, despite the growing health and economic burden, governments spend only around 2% of their health budgets on these disorders and people with mental health conditions often experience severe human rights violations, discrimination, and stigma.
+
+The dataset used in this analysis originates from a community health assessment conducted by the University of Southern California's Global Research Implementation and Training Lab in Lira District, Eastern Uganda.
+
+<br>
+
+# Study Objectives
+
+In response to the call for greater attention to mental health challenges in low-income and post-conflict communities, a community-based participatory research (CBPR) study was carried out in Lira District, Uganda in the Spring of 2022. Data was collected through an adolescent questionnaire assessing general demographics, physical health status, diet, substance use, violence and risky behaviors, mental health knowledge, and behaviors, Adverse Childhood Experiences Score (ACE-IQ), and WHO-5 Wellbeing Index Scores.
+
+The main research question explored through this dataset is, using measures including ACE-IQ and WHO Wellbeing Index scores as predictors, what are current mental health outcomes among adolescents in Lira District, specifically looking at how might factors, such as gender and participant subcounty affect these outcomes among this population.
+
+<br>
+
+```{r read-data, echo=FALSE, cache=TRUE}
+setwd("/Users/kyraguy/Desktop/PhD/PM566")
+datafinal <- read_excel("ACEIQData.xlsx")
+```
+
+```{r data prep, echo=FALSE}
+#missingvalues
+missing_values <- datafinal %>%
+  summarise_all(~ sum(is.na(.)))
+
+#sumscore
+datafinal$acescore <- rowSums(datafinal[, c("q88", "q89", "q90", "q91", "q92", "q93", "q94", "q95", "q96", "q97", "q98", "q99", "q100")], na.rm = TRUE)
+
+#newvariables
+datafinal <- datafinal %>%
+  mutate(age_category = ifelse(age %in% c(1, 2), 1, ifelse(age %in% c(3, 4), 2, NA)))
+
+datafinal <- datafinal %>%
+  mutate(friends_category = ifelse(friends %in% c(1, 2), 1, ifelse(friends %in% c(3, 4), 2, NA)))
+
+
+datafinal$Subcounty <- factor(datafinal$Subcounty, labels = c("Ayami", "Aromo", "Agweng"))
+
+datafinal$age_category <- factor(datafinal$age_category, labels = c("14-15", "16-17"))
+
+datafinal$gender <- factor(datafinal$gender, labels = c("Male", "Female"))
+
+datafinal$religion <- factor(datafinal$religion, labels = c("Anglican", "Roman Catholic", "Muslim", "Pentecostal", "Jewish"))
+
+datafinal$peopleinhome <- factor(datafinal$peopleinhome, labels = c("Mother", "Father", "Brother/Sister", "Grandparent"))
+
+datafinal$caretaker <- factor(datafinal$caretaker, labels = c("I sleep alone", "2 people", "3 people", "4 people", "5 or more people"))
+
+datafinal$school <- factor(datafinal$school, labels = c("Enrolled", "Not enrolled"))
+```
+
+```{r table1, echo=FALSE, class.source="code-r-small"}
+table1::label(datafinal$Subcounty) <- "Subcounty"
+table1::label(datafinal$age_category) <- "Age Category"
+table1::label(datafinal$gender) <- "Gender"
+table1::label(datafinal$religion) <- "Religion"
+table1::label(datafinal$peopleinhome) <- "People in Home"
+table1::label(datafinal$caretaker) <- "Caretaker"
+table1::label(datafinal$school) <- "School"
+```
+
+```{r plot1, echo=FALSE, class.source="code-r-small"}
+#histograms
+filtered_data <- datafinal[!is.na(datafinal$acescore), ]
+ace_histogram <- ggplot(filtered_data, aes(x = acescore)) +
+  geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of ACE Scores",
+       x = "ACE Score", y = "Count") +
+  theme_minimal()
+```
+
+```{r plot2, echo=FALSE, class.source="code-r-small"}
+
+# Filter out NA values
+filtered_data <- datafinal %>% filter(!is.na(acescore))
+
+# Create a boxplot for Gender
+gender_boxplot <- ggplot(filtered_data, aes(x = as.factor(gender), y = acescore)) +
+  geom_boxplot() +
+  labs(title = "ACE Scores by Gender", x = "Gender", y = "ACE Score")
+
+# Create a boxplot for Subcounty
+subcounty_boxplot <- ggplot(filtered_data, aes(x = as.factor(Subcounty), y = acescore)) +
+  geom_boxplot() +
+  labs(title = "ACE Scores by Subcounty", x = "Subcounty", y = "ACE Score")
+```
+
+```{r plot3, echo=FALSE, class.source="code-r-small"}
+filtered_data_wellbeing <- datafinal %>% filter(!is.na(wellbeingindex))
+
+# Create a boxplot for Gender
+gender_wellbeing_boxplot <- ggplot(filtered_data_wellbeing, aes(x = as.factor(gender), y = wellbeingindex)) +
+  geom_boxplot() +
+  labs(title = "Wellbeing Index Scores by Gender", x = "Gender", y = "Wellbeing Index")
+
+# Create a boxplot for Subcounty
+subcounty_wellbeing_boxplot <- ggplot(filtered_data_wellbeing, aes(x = as.factor(Subcounty), y = wellbeingindex)) +
+  geom_boxplot() +
+  labs(title = "Wellbeing Index Scores by Subcounty", x = "Subcounty", y = "Wellbeing Index")
+```
+
+```{r plot4, echo=FALSE, class.source="code-r-small"}
+p5 <- ggplot(datafinal, aes(x = acescore, y = wellbeingindex)) +
+  geom_point(alpha = 0.5, position = position_jitter(h = 0.2, w = 0.2)) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Wellbeing Index Scores and ACE Scores",
+       x = "ACE Scores",
+       y = "Wellbeing Index Scores") +
+  theme_minimal()
+ggplotly_p5 <- ggplotly(p5, tooltip = "text")
+```
+
+<br>
+
+## Results {.tabset}
+
+### Table 1
+
+```{r echo=FALSE}
+table1::table1(~Subcounty + age_category + gender + religion + peopleinhome + caretaker + school, data = datafinal)
+```
+
+This table shows participant demographics. Amongst the surveyed youth, 45.42% were male and 54.58% were female, the majority of which (61.8%) were 14 and 15 years old and enrolled in school (87.5%).
+
+### Plot 1
+
+```{r echo=FALSE}
+print(ace_histogram)
+```
+
+Adverse Childhood Experience (ACE-IQ) scores for adolescents ranged from 0-11, with an average score of 3. Out of 13.41% of adolescents had ACE-IQ scores of 4 or higher. WHO Wellbeing Index scores ranged from 20-100, with an average score of 48.38.
+
+### Plot 2
+
+```{r echo=FALSE}
+gridExtra::grid.arrange(gender_boxplot, subcounty_boxplot, ncol = 2)
+```
+
+In all 3 sub-counties, females scored higher than males, with females in Agweng scoring the highest on the ACE-IQ survey tool indicating having experienced the most adverse childhood experiences.
+
+### Plot 3
+
+```{r echo=FALSE}
+gridExtra::grid.arrange(gender_wellbeing_boxplot, subcounty_wellbeing_boxplot, ncol = 2)
+```
+
+Males still scored higher in the wellbeing index. Adolescents from Agweng had the lowest scores.
+
+### Plot 4
+
+```{r echo=FALSE}
+ggplotly_p5
+```
+
+From the scatterplot of ACE scores and Wellbeing index scores they seem to have a moderate inverse relationship, higher ACE scores indicate lower Wellbeing scores.
+
+# Conclusions
+
+Preliminary study results indicate that adolescents surveyed throughout Lira District in northern Uganda exhibited poor mental health status. Participant gender and sub-county played significant roles in mental health outcomes. Ultimately, results show that poor mental health outcomes disproportionately impact the weakest and often most marginalized populations in society; namely poor, rural, women and girls. The adolescents surveyed have no living memory of the war, however, they do have memories of the immediate aftermath, have grown up in communities struggling to rebuild post-conflict, and have been raised by parents who most likely suffered directly. This study provides useful insight into the impact of the conflict on the health and wellness of the subsequent generation of youth in the region. Mental health response by politically informed analyses and interventions should be a priority focus for building positive adolescent health outcomes.
+
+<br>
+
+For further analysis, view the full study report here: [[Download the PDF Report]](file:///Users/kyraguy/Downloads/Adolescent%20Mental%20Health%20Assessment.pdf)
