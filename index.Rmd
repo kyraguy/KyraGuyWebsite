@@ -213,4 +213,4 @@ Preliminary study results indicate that adolescents surveyed throughout Lira Dis
 
 <br>
 
-For further analysis, view the full study report here: [[Download the PDF Report]](file:///Users/kyraguy/Downloads/HealthAssessment.pdf)
+For further analysis, view the full study report here:(file:///Users/kyraguy/Downloads/HealthAssessment.pdf)
