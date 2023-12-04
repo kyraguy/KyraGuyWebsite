@@ -178,7 +178,7 @@ This table shows participant demographics. Amongst the surveyed youth, 45.42% we
 ### Plot 1
 
 ```{r echo=FALSE}
-print(ace_histogram)
+ace_histogram
 ```
 
 Adverse Childhood Experience (ACE-IQ) scores for adolescents ranged from 0-11, with an average score of 3. Out of 13.41% of adolescents had ACE-IQ scores of 4 or higher. WHO Wellbeing Index scores ranged from 20-100, with an average score of 48.38.
