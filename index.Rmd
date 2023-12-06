@@ -67,7 +67,7 @@ The main research question explored through this dataset is, using measures incl
 <br>
 
 ```{r read-data, echo=FALSE, cache=TRUE}
-setwd("/Users/kyraguy/Desktop/PhD/PM566")
+setwd("/")
 datafinal <- read_excel("ACEIQData.xlsx")
 ```
 
